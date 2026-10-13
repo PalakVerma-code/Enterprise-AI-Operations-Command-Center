@@ -1,0 +1,18 @@
+{
+  "name": "nexusops",
+  "version": "1.0.0",
+  "description": "NexusOps — Enterprise AI Operations Command Center combining HR/HCM and IT Incident Management with autonomous AI agents",
+  "scripts": {
+    "install:all": "npm install && cd server && npm install && cd ../frontend && npm install",
+    "server": "cd server && npm start",
+    "frontend": "cd frontend && npm run dev",
+    "python": "venv\\Scripts\\python.exe -m uvicorn api.main:app --reload --host 0.0.0.0 --port 8000",
+    "dev": "concurrently \"npm run server\" \"npm run frontend\" \"npm run python\"",
+    "build": "cd frontend && npm run build",
+    "test:py": "venv\\Scripts\\pytest tests/ -v",
+    "setup:db": "venv\\Scripts\\python.exe setup_db.py"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

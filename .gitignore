@@ -1,0 +1,29 @@
+# Environment
+.env
+*.env.local
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.db
+
+# Node
+node_modules/
+server/node_modules/
+frontend/node_modules/
+server/data/accounts.json
+
+# Build
+frontend/dist/
+*.egg-info/
+
+# Tickets (auto-generated)
+tickets/*.md
+
+# IDE
+.vscode/
+.idea/
+*.swp
